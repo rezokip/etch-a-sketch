@@ -1,0 +1,12 @@
+.playground-container{
+ display: grid;
+
+ width: 850px;
+ height: 850px;
+  
+}
+.playground-container div{
+ border: solid;  
+ border-width: 0.1px;
+}
+
