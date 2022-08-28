@@ -1,12 +1,54 @@
-.playground-container{
- display: grid;
+*{
+  margin:0;
+  padding:0;
+}
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: rgba(36, 6, 65, 0.178);
+  font-family: Arial, Helvetica, sans-serif;
+}
 
- width: 850px;
- height: 850px;
-  
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 35px;
+  color: rgb(205, 62, 218);
+}
+
+.button-section{
+  display: flex;
+  gap: 20px;
+ 
+}
+#layout-button, #color-button{
+  background-color: rgb(74, 9, 134);
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.playground-container{
+display: grid;
+background-color: rgba(128, 128, 128, 0.103);
+width: 850px;
+height: 850px;
 }
 .playground-container div{
- border: solid;  
- border-width: 0.1px;
+ border:solid rgba(0, 0, 0, 0.11) 0.1px;
+ 
 }
 

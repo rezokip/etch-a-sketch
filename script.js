@@ -9,6 +9,9 @@ const colorButton =document.querySelector('#color-button')
     // append the div element to playgroundContainer
   // style the gridTemplateColumns of the playGroundcontainer to repeat(choice, 1fr)   
 
+ let choosenColor ="red" 
+
+
 function getGridLayout (choice){
   if(choice<=100&&choice>=2){
     for(i=0;i<(choice*choice);i++){
@@ -18,15 +21,17 @@ function getGridLayout (choice){
       div.addEventListener('mouseover', function(e){
         this.style.backgroundColor = choosenColor
       })
-    }  
+      playgroundContainer.style.gridTemplateColumns= `repeat(${choice}, 1fr)` 
+    } 
+    
   }
-  
-  playgroundContainer.style.gridTemplateColumns= `repeat(${choice}, 1fr)`
+ 
   
 }
 
 
 layoutButton.addEventListener('click', function(){
+  playgroundContainer.innerHTML = "";
   getGridLayout(prompt("choose between 2 and 100"))
 })
 
